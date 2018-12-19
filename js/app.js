@@ -32,20 +32,20 @@ Enemy.prototype.render = function() {
 
 // Now write your own player class - This class requires an update(), render() and a handleInput() method.
 
+
 // Hero class
 class Hero {
     constructor() {
-        this.x = 0;
-        this.y = 0;
-        this.sprite = 'image/char-boy.png';
+        this.x = 0; // x coord
+        this.y = 0; // y coord
+        this.sprite = 'images/char-boy.png'; // Sprite image
+    }
+
+    render() {
+        // Draw Hero sprite on current x and y coord
+        ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
 }
-    // Constructor
-
-    // Properties
-        // x coord
-        // y coord
-        // Sprite image
 
     // Methods
         // Update position
@@ -53,8 +53,6 @@ class Hero {
                 // Did hero x and Y collide with enemy?
             // Check win?
                 // Did Hero x and Y reach final tiles?
-        // Render
-            // Draw Hero sprite on current x and y coord
         // Handle keyboard input
             // Update hero's x and y coords according to input
         // Reset Hero
@@ -62,6 +60,7 @@ class Hero {
 
 
 // New hero object
+const player = new Hero();
 
 // Init all enemy arrays
 // For each enemy create and push a new enemy into the above array
