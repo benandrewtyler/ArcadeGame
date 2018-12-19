@@ -24,12 +24,35 @@ Enemy.prototype.render = function() {
 // This class requires an update(), render() and
 // a handleInput() method.
 
+// Hero class
+    // Constructor
 
+    // Properties
+        // x coord
+        // y coord
+        // Sprite image
+
+    // Methods
+        // Update position
+            // Check for colision
+                // Did hero x and Y collide with enemy?
+            // Check win?
+                // Did Hero x and Y reach final tiles?
+        // Render
+            // Draw Hero sprite on current x and y coord
+        // Handle keyboard input
+            // Update hero's x and y coords according to input
+        // Reset Hero
+            // set x and y coords to starting x and y
+
+
+
+            
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
 
-sdfsfsafsdfs
+
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
