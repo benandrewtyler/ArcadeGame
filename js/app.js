@@ -45,6 +45,25 @@ class Hero {
         // Draw Hero sprite on current x and y coord
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
+
+    // Update hero's x and y coords according to input
+    // @param {string} input - Direction of travel
+    handleInput(input) {
+        switch(input) {
+            case 'left':
+                this.x -= 20;
+                break;
+            case 'up':
+                this.y -= 20;
+                break;
+            case 'right':
+                this.x += 20;
+                break;
+            case 'down':
+                this.y += 20;
+                break;
+        }
+    }
 }
 
     // Methods
