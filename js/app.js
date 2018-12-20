@@ -1,7 +1,7 @@
 // Enemies our hero must avoid
-var Enemy = function() {
-    this.x = 0; // x pos
-    this.y = 0; // y pos
+var Enemy = function(x,y) {
+    this.x = x; // x pos
+    this.y = y + 55; // y pos
     this.sprite = ('images/enemy-bug.png'); // The image/sprite for our enemies, this uses
     this.step = 101;
     this.boundary = this.step * 5;
@@ -92,9 +92,11 @@ class Hero {
 
 // New hero object
 const player = new Hero();
-const bug1 = new Enemy();
+const bug1 = new Enemy(-101,0);
+const bug2 = new Enemy(-101,83);
+const bug3 = new Enemy((-101*2.5),83);
 const allEnemies = []; // Init all enemy arrays
-allEnemies.push(bug1); // For each enemy create and push a new enemy into the above array
+allEnemies.push(bug1,bug2,bug3); // For each enemy create and push a new enemy into the above array
 
 
 // This listens for key presses and sends the keys to your
