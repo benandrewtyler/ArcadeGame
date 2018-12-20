@@ -38,7 +38,7 @@ class Hero {
     constructor() {
         this.x = 0; // x coord
         this.y = 0; // y coord
-        this.sprite = 'images/char-boy.png'; // Sprite image
+        this.sprite = 'images/char-princess-girl.png'; // Sprite image
     }
 
     render() {
