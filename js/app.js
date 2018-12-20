@@ -2,13 +2,10 @@
 var Enemy = function() {
     this.x = 0; // x pos
     this.y = 0; // y pos
-    this.sprite = ('images/enemy-bug.png');
+    this.sprite = ('images/enemy-bug.png'); // The image/sprite for our enemies, this uses
     this.step = 101;
-
-    // Variables applied to each of our instances go here,
-    // we've provided one for you to get started
-    // The image/sprite for our enemies, this uses
-    // a helper we've provided to easily load images
+    this.boundary = this.step * 5;
+    this.resetPos = -this.step;
 };
 
 // Update the enemy's position, required method for game
@@ -19,14 +16,15 @@ Enemy.prototype.update = function(dt) {
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
-    if(this.x < this.step * 4) { // If enemy is not passed boundary
+    if(this.x < this.boundary) { // If enemy is not passed boundary
     // Move forward
         this.x += 200 * dt; // Increment x by speed * dt
     }
-    // else 
-        // Reset pos to start
+    else {
+        this.x = this.resetPos; // Reset pos to start
+    }
 };
-
+  
 // Draw the enemy on the screen, required method for game
 Enemy.prototype.render = function() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
