@@ -3,24 +3,26 @@ var Enemy = function() {
     this.x = 0; // x pos
     this.y = 0; // y pos
     this.sprite = ('images/enemy-bug.png');
+    this.step = 101;
 
     // Variables applied to each of our instances go here,
     // we've provided one for you to get started
     // The image/sprite for our enemies, this uses
     // a helper we've provided to easily load images
-    this.sprite = 'images/enemy-bug.png';
 };
 
 // Update the enemy's position, required method for game
 // Parameter: dt, a time delta between ticks
 Enemy.prototype.update = function(dt) {
+
+
     // You should multiply any movement by the dt parameter
     // which will ensure the game runs at the same speed for
     // all computers.
-
-    // If enemy is not passed boundary
-        // Move forward
-        // Increment x by speed * dt
+    if(this.x < this.step * 4) { // If enemy is not passed boundary
+    // Move forward
+        this.x += 200 * dt; // Increment x by speed * dt
+    }
     // else 
         // Reset pos to start
 };
@@ -93,15 +95,8 @@ class Hero {
 // New hero object
 const player = new Hero();
 const bug1 = new Enemy();
-const allEnemies = [];
-allEnemies.push(bug1);
-// Init all enemy arrays
-// For each enemy create and push a new enemy into the above array
-
-// Now instantiate your objects.
-// Place all enemy objects in an array called allEnemies
-// Place the player object in a variable called player
-
+const allEnemies = []; // Init all enemy arrays
+allEnemies.push(bug1); // For each enemy create and push a new enemy into the above array
 
 
 // This listens for key presses and sends the keys to your
