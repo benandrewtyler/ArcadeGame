@@ -25,9 +25,19 @@ var Engine = (function(global) {
         lastTime,
         id;
 
+    const modal = document.querySelector('.modal-bg');
+    const replay = document.querySelector('.modal-button');
+    const startModal = document.querySelector('.modal_start_body');
     canvas.width = 505;
     canvas.height = 606;
     doc.body.appendChild(canvas);
+
+    replay.addEventListener('click', function() {
+        modal.classList.toggle('hide');
+        player.reset();
+        player.victory = false;
+        win.requestAnimationFrame(main);
+    });
 
     /* This function serves as the kickoff point for the game loop itself
      * and handles properly calling the update and render methods.
@@ -56,8 +66,10 @@ var Engine = (function(global) {
         /* Use the browser's requestAnimationFrame function to call this
          * function again as soon as the browser is able to draw another frame.
          */
+
         if (player.victory === true) {
-            win.cancleAnimationFrame(id);
+            win.cancelAnimationFrame(id);
+            modal.classList.toggle('hide');
         }
         else {
             id = win.requestAnimationFrame(main);
