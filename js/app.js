@@ -53,13 +53,18 @@ class Hero {
 
     update() {
         for(let enemy of allEnemies) { //Check collision
-            if (this.y === enemy.y && (enemy.x + enemy.step > this.x && enemy.x < this.x + this.step)) { //Did player x and y collide?
-                console.log('Collide!');
+            if (this.y === enemy.y && (enemy.x + enemy.step/2 > this.x && enemy.x < this.x + this.step/2)) { //Did player x and y collide?
+                this.reset();
             }
         }
          
         //Check win here?
             //Did player x and y reach final tile?
+    }
+
+    reset() {
+       this.y = this.startY;
+       this.x = this.startX; 
     }
 
     // Update hero's x and y coords according to input
