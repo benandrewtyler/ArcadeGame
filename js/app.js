@@ -41,7 +41,7 @@ class Hero {
         this.step = 101; // one block in x axis
         this.jump = 83; // one block in y axis
         this.startX = this.step * 2;
-        this.startY = (this.jump * 5) - 20;
+        this.startY = (this.jump * 4) + 55;
         this.x = this.startX; // x coord
         this.y = this.startY; // y coord
     }
@@ -49,6 +49,18 @@ class Hero {
     render() {
         // Draw Hero sprite on current x and y coord
         ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+    }
+
+    update() {
+        for(let enemy of allEnemies) { //Check collision
+            if (this.y === enemy.y) { //Did player x and y collide?
+                console.log('HIT!');
+            }
+            console.log(this.y, enemy.y)
+        }
+         
+        //Check win here?
+            //Did player x and y reach final tile?
     }
 
     // Update hero's x and y coords according to input
@@ -78,18 +90,6 @@ class Hero {
         }
     }
 }
-
-    // Methods
-        // Update position
-            // Check for colision
-                // Did hero x and Y collide with enemy?
-            // Check win?
-                // Did Hero x and Y reach final tiles?
-        // Handle keyboard input
-            // Update hero's x and y coords according to input
-        // Reset Hero
-            // set x and y coords to starting x and y
-
 
 // New hero object
 const player = new Hero();
