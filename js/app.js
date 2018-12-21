@@ -44,6 +44,7 @@ class Hero {
         this.startY = (this.jump * 4) + 55;
         this.x = this.startX; // x coord
         this.y = this.startY; // y coord
+        this.victory = false;
     }
 
     render() {
@@ -61,7 +62,7 @@ class Hero {
         //Check win here?
             //Did player x and y reach final tile?
             if(this.y === 55) {
-                console.log('WIN!');
+                this.victory = true;
             }
     }
 
