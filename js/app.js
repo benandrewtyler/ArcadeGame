@@ -53,10 +53,9 @@ class Hero {
 
     update() {
         for(let enemy of allEnemies) { //Check collision
-            if (this.y === enemy.y) { //Did player x and y collide?
-                console.log('HIT!');
+            if (this.y === enemy.y && (enemy.x + enemy.step > this.x && enemy.x < this.x + this.step)) { //Did player x and y collide?
+                console.log('Collide!');
             }
-            console.log(this.y, enemy.y)
         }
          
         //Check win here?
