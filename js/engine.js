@@ -32,12 +32,14 @@ var Engine = (function(global) {
     canvas.height = 606;
     doc.body.appendChild(canvas);
 
-    replay.addEventListener('click', function() {
+    replay.addEventListener("click", function () {
         modal.classList.toggle('hide');
         player.reset();
         player.victory = false;
         win.requestAnimationFrame(main);
     });
+
+
 
     /* This function serves as the kickoff point for the game loop itself
      * and handles properly calling the update and render methods.
@@ -66,6 +68,7 @@ var Engine = (function(global) {
         /* Use the browser's requestAnimationFrame function to call this
          * function again as soon as the browser is able to draw another frame.
          */
+
 
         if (player.victory === true) {
             win.cancelAnimationFrame(id);

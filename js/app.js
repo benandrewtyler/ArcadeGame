@@ -62,6 +62,7 @@ class Hero {
         //Check win here?
             //Did player x and y reach final tile?
             if(this.y === 55) {
+                console.log('win!');
                 this.victory = true;
             }
     }
