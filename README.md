@@ -41,13 +41,12 @@ Reach the river!
 ## List of files
 
 ### CSS
-* app.css
+* style.css
 
 ### JS
+* engine.js
 * app.js
-
-### HTML
-* geometry2.png
+* resources.js
 
 ### HTML
 * index.html
@@ -74,9 +73,9 @@ TBC
 
 I will be adding a link to my Kanban board for future updates to this and other projects, but before this, below is a short list of nice to haves in the short term:
 
-* Updated UI - I would like to add card flip animation and make the colour scheme a little more personal
-* Winning - Make the act of winning have an incentive
-* Start page - Add a start menu
+* Updated UI - I would like to add more assets with a non standard art style and make the colour scheme a little more personal
+* Winning - Make the act of winning have an incentive, i.e. more winning conditions, scoring, timer that reduces score
+* Start page - Add a start menu with character select
 
 Lastly, efforts could be made and hopefully sustained on the overall
 maintenance, with improved documentation, tutorials/presentations of how
@@ -99,8 +98,10 @@ Hopefully, new features, patches or tests added to this repo might as well be po
 * Currently maintained by Ben Tyler
 * Documentation and testing by Ben Tyler.
 * Inspiration and code snipit credits:
-    [https://matthewcranford.com](https://matthewcranford.com)  - Great walkthrough that got me out of a couple of tight spots!
-    [https://chrissim.me](https://chrissim.me) - Interesting implimentation of the memory game.
+    [https://matthewcranford.com](https://matthewcranford.com)  - Great walkthrough (again!) that got me out of a couple of tight spots!
+    [https://www.youtube.com/watch?v=JcQYGbg0IkQ](https://www.youtube.com/watch?v=JcQYGbg0IkQ) - Good webinar focused on the arcade game development.
+    [http://taylorjaygarner.com/portfolio/arcade-game/](http://taylorjaygarner.com/portfolio/arcade-game/) - Great implimentation of the game, with nice compact start screen.
+    
 
 This development is sponsored by:
 Adam Bruce (My line manager)
